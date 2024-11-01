@@ -1,0 +1,114 @@
+/* styles.css */
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#content {    
+    width: 100%;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;  /* Tinggi sidebar sesuai tinggi viewport */    
+    background: #4A9C93;
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: auto; /* Menambahkan scrollbar jika konten terlalu panjang */
+}
+
+#sidebar.hide {
+    margin-left: -250px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar a {
+    padding: 10px 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: all 0.3s;
+}
+
+#sidebar a:hover {
+    background: #868e96;
+    color: #fff;
+}
+
+#sidebar .badge {
+    float: right;
+    background: #fff;
+    color: #343a40;
+    padding: 3px 8px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #4A9C93;
+}
+
+table.dataTable {
+    width: 100%;
+}
+
+.img-thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.hero {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+#productCarousel {
+    max-height: 400px;
+    overflow: hidden;
+}
+
+#productCarousel img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+
+    #sidebar.hide {
+        margin-left: 0;
+    }
+}
